@@ -6,7 +6,7 @@
  <body>
 
    <?php
-   require "~/www/4_dockerize_nginx_php_mysql/laravel-app-dockerized/src/public/blog/global.php";
+   require "/var/www/laravel/public/blog/global.php";
    ?>
    
  <a href="http://188.225.35.99:8000/blog/index.php" class="home">HOME</a> -
