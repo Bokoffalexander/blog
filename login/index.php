@@ -78,11 +78,11 @@
  "SELECT * FROM $db_table WHERE email = :email AND password = :password");
  // Выполняем запрос с данными
  $email_password = $query->execute($data);
-   $email_password->fetchALL(PDO::FETCH_CLASS);
-   foreach ($email_password as $row)
-   {
-     print $row->email;
+
+   while($row = $email_password -> fetch(PDO :: FETCH_ASSOC)){
+   echo "<p>" . $row['email'] . "</p>";
    }
+
    
 if ($email_password) {$res = true;} else {$res = false;}
  // Запишим в переменую, что запрос отрабтал
