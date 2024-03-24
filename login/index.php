@@ -71,13 +71,13 @@
  // Устанавливаем корректную кодировку
  // Собираем данные для запроса
  // Подготавливаем SQL-запрос
-   $sth = $db->query('SELECT email, password FROM Bokoff');
+   $stm = $db->query('SELECT * FROM Bokoff');
    $rows = $stm->fetchAll();
 
    // iterate over array by index and by name
    foreach($rows as $row) {
 
-       printf("$row[0] $row[1]\n");
+       printf("$row[0] $row[1] $row[2]\n");
 
    }
    
