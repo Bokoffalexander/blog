@@ -77,8 +77,8 @@
    $res=false;
    // iterate over array by index and by name
    foreach($rows as $row) {
-        if ($row[1]==$email && $row[2]==$password) {$res=true; printf("$row[1] $row[2]\n"); break;}
-       
+        if ($row[1]==$email && $row[2]==$password) {$res=true; break;}
+        //printf("$row[0] $row[1] $row[2]\n");
 
    }
    
@@ -89,9 +89,18 @@
  print "Ошибка!: " . $e->getMessage() .
  "<br/>"; }
 
- if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; } else {echo "Неуспех. <br> Неверный логин или пароль.<hr>";}
- }
+   $GLOBALS['is'] = false;
+   $GLOBALS['user'] = "...";
+   
+ if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
+            echo "You are logged in. <br> Go to <b>home</b>";
+            $GLOBALS['is'] = true;
+            $GLOBALS['user'] = $email;
+ } else {echo "Неуспех. <br> Неверный логин или пароль.<hr>";}
+ } // end of very up if
 
+   
+   
  ?>
 
  </body>

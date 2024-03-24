@@ -10,6 +10,12 @@
    <a href="http://188.225.35.99:8000/blog/login/index.php" class="home">login</a> - 
    <a href="http://188.225.35.99:8000/blog/logout/index.php" class="home">logout</a>
    <br>
+
+  <?php
+   $GLOBALS['is'] = false;
+   $GLOBALS['user'] = "...";
+  ?>
+  
 <div>
   You are logged out.
 </div>
