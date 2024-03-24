@@ -74,10 +74,11 @@
    $stm = $db->query('SELECT * FROM Bokoff');
    $rows = $stm->fetchAll();
 
+   $res=false;
    // iterate over array by index and by name
    foreach($rows as $row) {
-
-       printf("$row[0] $row[1] $row[2]\n");
+        if ($row[1]==$email && $row[2]==$password) {$res=true; printf("$row[1] $row[2]\n"); break;}
+       
 
    }
    
