@@ -81,17 +81,6 @@
 
    }
    
- $query = $db->prepare(
- "SELECT * FROM $db_table WHERE email = :email AND password = :password");
- // Выполняем запрос с данными
- $email_password = $query->execute($data);
-
-   while($row = $email_password -> fetchAll()){
-   echo "<p>" . $row['email'] . "</p>";
-   }
-
-   
-if ($email_password) {$res = true;} else {$res = false;}
  // Запишим в переменую, что запрос отрабтал
   }
   catch (PDOException $e) {
