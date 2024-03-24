@@ -77,8 +77,7 @@
    // iterate over array by index and by name
    foreach($rows as $row) {
 
-       //printf("$row[0] $row[1] $row[2]\n");
-       printf("$row['email'] $row['password'] \n");
+       printf("$row[0] $row[1]\n");
 
    }
    
