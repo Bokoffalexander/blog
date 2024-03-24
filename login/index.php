@@ -79,7 +79,7 @@
  // Выполняем запрос с данными
  $email_password = $query->execute($data);
 
-   while($row = $email_password -> fetch(PDO :: FETCH_ASSOC)){
+   while($row = $email_password -> fetchAll()){
    echo "<p>" . $row['email'] . "</p>";
    }
 
