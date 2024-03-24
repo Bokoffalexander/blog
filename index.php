@@ -15,7 +15,7 @@
    <a href="http://188.225.35.99:8000/blog/logout/index.php" class="home">logout</a>
    <br>
   
-  <?php if($GLOBALS['is'] == true) {echo $GLOBALS['user'];}
+  <?php if($login_is == true) {echo $login_user;}
   else {echo "Please <b>register</b> or <b>login</b> to continue.";}
   ?>
 

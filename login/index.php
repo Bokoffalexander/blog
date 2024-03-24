@@ -93,13 +93,13 @@
  print "Ошибка!: " . $e->getMessage() .
  "<br/>"; }
 
-   $GLOBALS['is'] = false;
-   $GLOBALS['user'] = "...";
+    $login_is = false;
+    $login_user = "...";
    
  if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
             echo "You are logged in. <br> Go to <b>home</b>";
-            $GLOBALS['is'] = true;
-            $GLOBALS['user'] = $email;
+              $login_is = true;
+              $login_user = $email;
  } else {echo "Неуспех. <br> Неверный логин или пароль.<hr>";}
  } // end of very up if
 
