@@ -70,10 +70,18 @@
  $db = new PDO("mysql:host=$host;port=$port;dbname=$db",$username, $pass);
  // Устанавливаем корректную кодировку
  // Собираем данные для запроса
- $data = array(
- 'email' => $email,
- 'password' => $password );
  // Подготавливаем SQL-запрос
+   $sth = $db->query('SELECT email, password FROM Bokoff');
+   $rows = $stm->fetchAll();
+
+   // iterate over array by index and by name
+   foreach($rows as $row) {
+
+       //printf("$row[0] $row[1] $row[2]\n");
+       printf("$row['email'] $row['password'] \n");
+
+   }
+   
  $query = $db->prepare(
  "SELECT * FROM $db_table WHERE email = :email AND password = :password");
  // Выполняем запрос с данными
