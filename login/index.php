@@ -78,6 +78,7 @@
  "SELECT * FROM $db_table WHERE email = :email AND password = :password");
  // Выполняем запрос с данными
  $email_password = $query->execute($data);
+   print_r($email_password);
 if ($email_password) {$res = true;} else {$res = false;}
  // Запишим в переменую, что запрос отрабтал
   }
