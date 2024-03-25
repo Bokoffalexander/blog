@@ -2,7 +2,7 @@
  <html>
    
    <?php  
-   use login\Foo;?>
+   use Foo;?>
    
  <head>
    <title>PHP blog</title>
