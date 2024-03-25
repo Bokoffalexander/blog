@@ -102,7 +102,7 @@
  if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
             echo "You are logged in. <hr>";
         
-            use login\Foo;
+            use Foo;
               Foo::$login_is = true;
               Foo::$login_user = $email;
               Foo::$login_user_id = $login_user_id;
