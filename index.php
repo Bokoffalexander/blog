@@ -1,7 +1,3 @@
-<?php
-use login/index.php;
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,12 +11,6 @@ use login/index.php;
    <a href="http://188.225.35.99:8000/blog/logout/index.php" class="home">logout</a>
    <br>
   
-  <?php
-  //namespace blog;
-    echo Foo::$login_is."<br>";
-    echo Foo::$login_user."<br>";
-    echo Foo::$login_user_id."<br>";
-  ?> 
   
   <div> Please <b>register</b> or <b>login</b> to continue. </div>
  

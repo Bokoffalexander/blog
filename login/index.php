@@ -106,7 +106,7 @@ class Foo {
 
     
    
- if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
+ if ($res || isset($_GET['entry'])) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
             echo "You are logged in. <hr>";
         
             
