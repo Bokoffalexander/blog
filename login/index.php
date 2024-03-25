@@ -103,7 +103,7 @@
               
                $db_table = "Entry";
 
-                   if (isset($_POST['entry'])) {
+                   if (isset($_POST['entry']) && $_POST['entry']!='') {
                     // Переменные с формы
                     $entry = $_POST['entry'];
               
