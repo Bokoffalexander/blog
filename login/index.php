@@ -101,7 +101,7 @@
    
  if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
             echo "You are logged in. <hr>";
-            namespace login\;
+        
             use login\Foo;
               Foo::$login_is = true;
               Foo::$login_user = $email;
