@@ -1,5 +1,5 @@
 <?php  
- use Foo;?>
+ use \Foo;?>
 
 <!DOCTYPE html>
  <html>
