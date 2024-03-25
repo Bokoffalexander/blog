@@ -1,8 +1,8 @@
 <!DOCTYPE html>
  <html>
    
-   <?php namespace login\; 
-   use login\index;?>
+   <?php  
+   use login\Foo;?>
    
  <head>
    <title>PHP blog</title>
