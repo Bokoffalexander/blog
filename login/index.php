@@ -103,14 +103,14 @@
 
                $db_table = "Entry";
             
-                echo "<form action='index.php' method='POST'>";
+                echo "<form action='index.php' method='GET'>";
                 echo "<p>Entry:<br><input type='text' name='entry'> </p>";
                 echo "<input type='submit'>";
                 echo "</form>";
 
-                   if (isset($_POST['entry'])) {
+                   if (isset($_GET['entry'])) {
                     // Переменные с формы
-                    $entry = $_POST['entry'];
+                    $entry = $_GET['entry'];
               
                     $db = new PDO("mysql:host=$host;port=$port;dbname=$db",$username, $pass);
                     // Устанавливаем корректную кодировку
