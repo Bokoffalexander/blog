@@ -1,5 +1,5 @@
 <?php
-require 'login/Foo.php';
+require 'login/index.php';
 ?>
 
 <!DOCTYPE html>
