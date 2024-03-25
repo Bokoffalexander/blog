@@ -1,5 +1,5 @@
 <?php
-namespace blog;
+require login\Foo.php;;
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +17,9 @@ namespace blog;
   
   <?php
   //namespace blog;
-    echo login\Foo::$login_is."<br>";
-    echo login\Foo::$login_user."<br>";
-    echo login\Foo::$login_user_id."<br>";
+    echo Foo::$login_is."<br>";
+    echo Foo::$login_user."<br>";
+    echo Foo::$login_user_id."<br>";
   ?> 
   
   <div> Please <b>register</b> or <b>login</b> to continue. </div>
