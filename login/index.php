@@ -121,7 +121,7 @@
                     echo "Записано в БД.<br>";}
 
              echo "<br><hr>Записи<hr>";
-             $stm = $db->query('SELECT * FROM Entry where user_id='.$login_user_id."");
+             $stm = $db->query('SELECT * FROM Entry where user_id='.$login_user_id." ORDER BY id DESC");
              $rows = $stm->fetchAll();
             foreach($rows as $row) {
               echo $row[1]."<br>"."<br>";}
