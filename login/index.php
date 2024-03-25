@@ -1,10 +1,10 @@
+<?php  
+ namespace laravel\login;;
+
+ use Foo;?>
+
 <!DOCTYPE html>
  <html>
-   
-   <?php  
-   namespace laravel\login;;
-
-   use Foo;?>
    
  <head>
    <title>PHP blog</title>
