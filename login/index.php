@@ -52,7 +52,7 @@
  <?php
 
  $host = "188.225.35.99";
- $db = "laravel_db";
+ $db_name = "laravel_db";
  $port = 3316;
  $username = "laravel";
  $pass = "password";
@@ -70,7 +70,7 @@
  // Имя Таблицы БД
  // Подключение к базе данных
  try {
- $db = new PDO("mysql:host=$host;port=$port;dbname=$db",$username, $pass);
+ $db = new PDO("mysql:host=$host;port=$port;dbname=$db_name",$username, $pass);
  // Устанавливаем корректную кодировку
  // Собираем данные для запроса
  // Подготавливаем SQL-запрос
@@ -108,7 +108,7 @@
                     // Переменные с формы
                     $entry = $_POST['entry'];
               
-                    $db = new PDO("mysql:host=$host;port=$port;dbname=$db",$username, $pass);
+                    $db = new PDO("mysql:host=$host;port=$port;dbname=$db_name",$username, $pass);
                     // Устанавливаем корректную кодировку
                     // Собираем данные для запроса
                     $data = array(
