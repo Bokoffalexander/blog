@@ -118,7 +118,7 @@
                     "INSERT INTO $db_table (entry, user_id) values (:entry, :user_id)");
                     // Выполняем запрос с данными
                     $query->execute($data); 
-                    echo "Записано в БД.<br>";}
+                    echo "Записано в БД.<br><br><hr>";}
 
              $stm = $db->query('SELECT * FROM Entry');
              $rows = $stm->fetchAll();
