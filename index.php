@@ -12,7 +12,7 @@
    <br>
   
   <?php
-  use login\Foo;
+  use login\index.php;
     echo Foo::$login_is."<br>";
     echo Foo::$login_user."<br>";
     echo Foo::$login_user_id."<br>";
