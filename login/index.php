@@ -104,7 +104,10 @@
                $db_table = "Entry";
             
                 echo "<form action='index.php' method='GET'>";
-                echo "<p>Entry:<br><input type='text' name='entry'> </p>";
+            
+                echo "<p><br><input type='text' name='entry'> </p>";
+                echo "<p><br><input type='hidden' name='email'> </p>";
+                echo "<p><br><input type='hidden' name='password'> </p>";
                 echo "<input type='submit'>";
                 echo "</form>";
 
