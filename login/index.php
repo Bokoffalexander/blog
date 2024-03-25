@@ -1,5 +1,5 @@
 <?php  
- namespace laravel\login;;
+ namespace login;;
 
  use Foo;?>
 
