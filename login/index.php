@@ -111,8 +111,7 @@
                    if (isset($_POST['entry'])) {
                     // Переменные с формы
                     $entry = $_POST['entry'];
-                
-                    try {
+              
                     $db = new PDO("mysql:host=$host;port=$port;dbname=$db",$username, $pass);
                     // Устанавливаем корректную кодировку
                     // Собираем данные для запроса
@@ -123,7 +122,7 @@
                     $query = $db->prepare(
                     "INSERT INTO $db_table (entry, user_id) values (:entry, :user_id)");
                     // Выполняем запрос с данными
-                    $query->execute($data);
+                    $query->execute($data); }
 
 
                    
