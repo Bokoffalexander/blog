@@ -1,6 +1,4 @@
 <?php  
- namespace login;;
-
  use Foo;?>
 
 <!DOCTYPE html>
