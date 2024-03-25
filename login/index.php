@@ -1,6 +1,12 @@
-<?php  
-namespace login;
- use Foo;?>
+<?php
+
+public class Foo {
+  public static $login_is = false;
+  public static $login_user = "...";
+  public static $login_user_id = null;
+}
+
+?>
 
 <!DOCTYPE html>
  <html>
