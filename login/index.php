@@ -2,7 +2,9 @@
  <html>
    
    <?php  
-   use /var/www/laravel/public/blog/login/Foo.php;?>
+   namespace laravel\login;;
+
+   use Foo;?>
    
  <head>
    <title>PHP blog</title>
