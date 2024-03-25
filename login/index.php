@@ -58,6 +58,7 @@
  $pass = "password";
  $db_table = "Bokoff";
 
+   $db = null;
    
  if (isset($_POST['email'])
  && isset($_POST['password']))
@@ -108,7 +109,7 @@
                     // Переменные с формы
                     $entry = $_POST['entry'];
               
-                    $db = new PDO("mysql:host=$host;port=$port;dbname=$db_name",$username, $pass);
+              //$db = new PDO("mysql:host=$host;port=$port;dbname=$db_name",$username, $pass);
                     // Устанавливаем корректную кодировку
                     // Собираем данные для запроса
                     $data = array(
