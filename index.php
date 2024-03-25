@@ -12,10 +12,10 @@
    <br>
   
   <?php
-  use login\index;
-    echo Foo::$login_is."<br>";
-    echo Foo::$login_user."<br>";
-    echo Foo::$login_user_id."<br>";
+  //use login\index;
+    echo login\Foo::$login_is."<br>";
+    echo login\Foo::$login_user."<br>";
+    echo login\Foo::$login_user_id."<br>";
   ?> 
   
   <div> Please <b>register</b> or <b>login</b> to continue. </div>
