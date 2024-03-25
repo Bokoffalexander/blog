@@ -76,9 +76,12 @@
    $rows = $stm->fetchAll();
 
    $res=false;
+   $login_is = false;
+   $login_user = "...";
+   $login_user_id = null;
    // iterate over array by index and by name
    foreach($rows as $row) {
-        if ($row[1]==$email && $row[2]==$password) {$res=true; break;}
+        if ($row[1]==$email && $row[2]==$password) {$res=true; $login_user_id = $row[0]; break;}
         //printf("$row[0] $row[1] $row[2]\n");
 
    }
@@ -90,13 +93,41 @@
  print "Ошибка!: " . $e->getMessage() .
  "<br/>"; }
 
-    $login_is = false;
-    $login_user = "...";
+    
    
  if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
-            echo "You are logged in. <br> Go to <b>home</b>";
+            echo "You are logged in. <hr>";
               $login_is = true;
               $login_user = $email;
+              echo "login_user_id = ".$login_user_id."<br>";
+
+               $db_table = "Entry";
+            
+                 <form action="index.php" method="POST">
+                 <p>Entry:<br><input type="text" name="entry"> </p>
+                 <input type="submit">
+             </form>
+
+                   if (isset($_POST['entry'])) {
+                    // Переменные с формы
+                    $entry = $_POST['entry'];
+                
+                    try {
+                    $db = new PDO("mysql:host=$host;port=$port;dbname=$db",$username, $pass);
+                    // Устанавливаем корректную кодировку
+                    // Собираем данные для запроса
+                    $data = array(
+                    'entry' => $entry,
+                    'user_id' => $login_user_id );
+                    // Подготавливаем SQL-запрос
+                    $query = $db->prepare(
+                    "INSERT INTO $db_table (entry, user_id) values (:entry, :user_id)");
+                    // Выполняем запрос с данными
+                    $query->execute($data);
+
+
+                   
+            
  } else {echo "Неуспех. <br> Неверный логин или пароль.<hr>";}
  } // end of very up if
 
