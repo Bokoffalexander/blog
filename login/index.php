@@ -1,17 +1,7 @@
-<?php
-
-class Foo {
-  public static $login_is = false;
-  public static $login_user = "...";
-  public static $login_user_id = null;
-}
-
-?>
-
 <!DOCTYPE html>
- <html>
-   
+ <html> 
  <head>
+   <meta charset="UTF-8">
    <title>PHP blog</title>
  </head>
  <body>
@@ -19,7 +9,7 @@ class Foo {
    
  <a href="http://188.225.35.99:8000/blog/index.php" class="home">HOME</a> -
  <a href="http://188.225.35.99:8000/blog/register/index.php" class="home">register</a> -
- <a href="http://188.225.35.99:8000/blog/login/index.php" class="home">login</a> - 
+ <a href="http://188.225.35.99:8000/blog/login/index.php" class="home">send entry</a> - 
  <a href="http://188.225.35.99:8000/blog/logout/index.php" class="home">logout</a>
  <br>
 
@@ -30,11 +20,12 @@ class Foo {
      $current_user = "...";
    }
    echo "User: ".$current_user; 
-   echo " LOGIN";?>
+   echo " Send";?>
 
  <form action="index.php" method="POST">
      <p>Email:<br><input type="text" name="email"> </p>
-     <p>Password: <br> <input type="password" name="password"> </p> <br>
+     <p>Password: <br> <input type="password" name="password"> </p>
+     <p>Entry: <br> <input type="text" name="entry"> </p> <br>
      <input type="submit">
  </form>
 
@@ -66,12 +57,6 @@ class Foo {
  $username = "laravel";
  $pass = "password";
  $db_table = "Bokoff";
-
-   if (isset($_POST['entry'])) {
-     echo Foo::$login_is."<br>";
-     echo Foo::$login_user."<br>";
-     echo Foo::$login_user_id."<br>";
-   }
 
    
  if (isset($_POST['email'])
@@ -114,22 +99,10 @@ class Foo {
    
  if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
             echo "You are logged in. <hr>";
-        
             
-              Foo::$login_is = true;
-              Foo::$login_user = $email;
-              Foo::$login_user_id = $login_user_id;
-            echo Foo::$login_is."<br>";
-            echo Foo::$login_user."<br>";
-            echo Foo::$login_user_id."<br>";
               echo "login_user_id = ".$login_user_id."<br>";
               
                $db_table = "Entry";
-            
-                echo "<form action='index.php' method='POST'>";
-                echo "<p><br><input type='text' name='entry'> </p>";
-                echo "<input type='submit'>";
-                echo "</form>";
 
                    if (isset($_POST['entry'])) {
                     // Переменные с формы
@@ -146,14 +119,10 @@ class Foo {
                     "INSERT INTO $db_table (entry, user_id) values (:entry, :user_id)");
                     // Выполняем запрос с данными
                     $query->execute($data); }
-
-
-                   
-            
+     
  } else {echo "Неуспех. <br> Неверный логин или пароль.<hr>";}
  } // end of very up if
 
-   
    
  ?>
 
