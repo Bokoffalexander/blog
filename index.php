@@ -1,3 +1,7 @@
+<?php
+namespace blog;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +16,7 @@
    <br>
   
   <?php
-  namespace blog;
+  //namespace blog;
     echo login\Foo::$login_is."<br>";
     echo login\Foo::$login_user."<br>";
     echo login\Foo::$login_user_id."<br>";
