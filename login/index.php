@@ -103,10 +103,10 @@
 
                $db_table = "Entry";
             
-                 <form action="index.php" method="POST">
-                 <p>Entry:<br><input type="text" name="entry"> </p>
-                 <input type="submit">
-             </form>
+                echo "<form action='index.php' method='POST'>";
+                echo "<p>Entry:<br><input type='text' name='entry'> </p>";
+                echo "<input type='submit'>";
+                echo "</form>";
 
                    if (isset($_POST['entry'])) {
                     // Переменные с формы
