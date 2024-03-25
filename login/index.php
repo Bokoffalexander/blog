@@ -79,8 +79,6 @@
    $rows = $stm->fetchAll();
 
    $res=false;
-   $login_is = false;
-   $login_user = "...";
    $login_user_id = null;
    // iterate over array by index and by name
    foreach($rows as $row) {
@@ -121,6 +119,11 @@
                     // Выполняем запрос с данными
                     $query->execute($data); 
                     echo "Записано в БД.<br>";}
+
+             $stm = $db->query('SELECT * FROM Entry');
+             $rows = $stm->fetchAll();
+            foreach($rows as $row) {
+              echo $row[1]."<br>"."<br>";}
      
  } else {echo "Неуспех. <br> Неверный логин или пароль.<hr>";}
  } // end of very up if
