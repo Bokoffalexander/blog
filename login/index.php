@@ -1,5 +1,6 @@
 <?php  
- use \Foo;?>
+namespace login;
+ use Foo;?>
 
 <!DOCTYPE html>
  <html>
