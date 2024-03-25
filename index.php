@@ -12,7 +12,6 @@
    <br>
   
   <?php
-  namespace ;
   use login\Foo;
     echo Foo::$login_is."<br>";
     echo Foo::$login_user."<br>";
