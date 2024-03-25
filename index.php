@@ -1,5 +1,5 @@
 <?php
-require login\Foo.php;;
+require login/Foo.php;
 ?>
 
 <!DOCTYPE html>
