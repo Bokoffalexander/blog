@@ -67,7 +67,13 @@ class Foo {
  $pass = "password";
  $db_table = "Bokoff";
 
+   if (isset($_POST['entry'])) {
+     echo Foo::$login_is."<br>";
+     echo Foo::$login_user."<br>";
+     echo Foo::$login_user_id."<br>";
+   }
 
+   
  if (isset($_POST['email'])
  && isset($_POST['password']))
  {
@@ -106,7 +112,7 @@ class Foo {
 
     
    
- if ($res || isset($_GET['entry'])) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
+ if ($res isset($_GET['entry'])) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
             echo "You are logged in. <hr>";
         
             
@@ -120,14 +126,14 @@ class Foo {
               
                $db_table = "Entry";
             
-                echo "<form action='index.php' method='GET'>";
+                echo "<form action='index.php' method='POST'>";
                 echo "<p><br><input type='text' name='entry'> </p>";
                 echo "<input type='submit'>";
                 echo "</form>";
 
-                   if (isset($_GET['entry'])) {
+                   if (isset($_POST['entry'])) {
                     // Переменные с формы
-                    $entry = $_GET['entry'];
+                    $entry = $_POST['entry'];
               
                     $db = new PDO("mysql:host=$host;port=$port;dbname=$db",$username, $pass);
                     // Устанавливаем корректную кодировку
