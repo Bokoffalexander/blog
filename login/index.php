@@ -113,6 +113,9 @@ class Foo {
               Foo::$login_is = true;
               Foo::$login_user = $email;
               Foo::$login_user_id = $login_user_id;
+            echo Foo::$login_is."<br>";
+            echo Foo::$login_user."<br>";
+            echo Foo::$login_user_id."<br>";
               echo "login_user_id = ".$login_user_id."<br>";
               
                $db_table = "Entry";
