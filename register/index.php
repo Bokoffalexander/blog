@@ -87,7 +87,7 @@
  print "Ошибка!: " . $e->getMessage() .
  "<br/>"; }
 
- if ($res) { echo "Успех.<br> Информация занесена в базу данных.<br> Go to <b>login</b>"; } 
+ if ($res) { echo "Успех.<br> Информация занесена в базу данных.<br> Go to <b>send entry</b>"; } 
  }
 
  ?>
