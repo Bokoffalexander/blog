@@ -2,7 +2,7 @@
  <html>
    
    <?php  
-   use Foo;?>
+   use /var/www/laravel/public/blog/login/Foo.php;?>
    
  <head>
    <title>PHP blog</title>
