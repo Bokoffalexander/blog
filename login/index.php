@@ -5,9 +5,6 @@
  </head>
  <body>
 
-   <?php
-   require "/var/www/laravel/public/blog/global.php";
-   ?>
    
  <a href="http://188.225.35.99:8000/blog/index.php" class="home">HOME</a> -
  <a href="http://188.225.35.99:8000/blog/register/index.php" class="home">register</a> -

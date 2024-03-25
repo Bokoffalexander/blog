@@ -4,23 +4,12 @@
   <title>PHP blog</title>
 </head>
 <body>
-
-  <?php
-  namespace blog;
-  ?>
   
   <a href="http://188.225.35.99:8000/blog/index.php" class="home">HOME</a> -
    <a href="http://188.225.35.99:8000/blog/register/index.php" class="home">register</a> -
    <a href="http://188.225.35.99:8000/blog/login/index.php" class="home">login</a> - 
    <a href="http://188.225.35.99:8000/blog/logout/index.php" class="home">logout</a>
    <br>
-
-   <?php print MyGlobal::$login_user . "\n";?>
-  
-  <?php
-   $login_is = false;
-   $login_user = "...";
-  ?>
   
 <div>
   You are logged out.
