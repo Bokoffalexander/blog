@@ -1,5 +1,9 @@
 <!DOCTYPE html>
  <html>
+   
+   <?php namespace login\; 
+   use login\index;?>
+   
  <head>
    <title>PHP blog</title>
  </head>
@@ -97,17 +101,17 @@
    
  if ($res) { echo "Успех.<br> Вы проверены в БД.<hr>"; 
             echo "You are logged in. <hr>";
-              $login_is = true;
-              $login_user = $email;
+            namespace login\;
+            use login\Foo;
+              Foo::$login_is = true;
+              Foo::$login_user = $email;
+              Foo::$login_user_id = $login_user_id;
               echo "login_user_id = ".$login_user_id."<br>";
-
+              
                $db_table = "Entry";
             
                 echo "<form action='index.php' method='GET'>";
-            
                 echo "<p><br><input type='text' name='entry'> </p>";
-                echo "<p><br><input type='hidden' name='email'> </p>";
-                echo "<p><br><input type='hidden' name='password'> </p>";
                 echo "<input type='submit'>";
                 echo "</form>";
 
