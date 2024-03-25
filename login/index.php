@@ -118,7 +118,8 @@
                     $query = $db->prepare(
                     "INSERT INTO $db_table (entry, user_id) values (:entry, :user_id)");
                     // Выполняем запрос с данными
-                    $query->execute($data); }
+                    $query->execute($data); 
+                    echo "Записано в БД.<br>";}
      
  } else {echo "Неуспех. <br> Неверный логин или пароль.<hr>";}
  } // end of very up if
