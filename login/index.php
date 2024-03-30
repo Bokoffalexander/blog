@@ -59,7 +59,8 @@
  $db_table = "Bokoff";
 
    $db = null;
-   
+   $res=false;
+
  if (isset($_POST['email'])
  && isset($_POST['password']))
  {
@@ -77,8 +78,7 @@
  // Подготавливаем SQL-запрос
    $stm = $db->query('SELECT * FROM Bokoff');
    $rows = $stm->fetchAll();
-
-   $res=false;
+  
    $login_user_id = null;
    // iterate over array by index and by name
    foreach($rows as $row) {
@@ -107,9 +107,6 @@
                     // Переменные с формы
                     $entry = $_POST['entry'];
               
-              //$db = new PDO("mysql:host=$host;port=$port;dbname=$db_name",$username, $pass);
-                    // Устанавливаем корректную кодировку
-                    // Собираем данные для запроса
                     $data = array(
                     'entry' => $entry,
                     'user_id' => $login_user_id );
